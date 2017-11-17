@@ -21,3 +21,7 @@ sudo debootstrap --arch=i386 --variant=minbase xenial $HOME/Project/root32 http:
 # 'xenial' adalah nama rilis ubuntu yang akan kita debootstrap. ganti sesuai keingin kita. misalkan zesty atau yang lain-nya
 # '$HOME/Project/root32' sesuaikan dengan tahap 2. Menyiapkan tempat kerja
 # 'http://kartolo.sby.datautama.net.id/ubuntu/' adalah repo  tempat kita mengunduh mibase ubuntu. sesuaikan dengan repo yang tercepat jika ada
+
+# 4. Ubah kepemilikan folder dvd
+chown root:root $HOME/Project/dvd32
+# sesuaikan dengan tahap 2. Menyiapkan tempat kerja.
