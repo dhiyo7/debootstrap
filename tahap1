@@ -1,0 +1,23 @@
+#!/bin/bash
+
+###################################################
+# Script penginstalan peralatan yang dibutuhkan   #
+# untuk keperluan pembuatan distro gnu/linux      #
+# dengan menggunakan debootstrap dan menyiapkan   #
+# folder kerja di home.				  #
+###################################################
+
+
+# 1. Menginstall aplikasi pendukung
+sudo apt-get install -y debootstrap syslinux isolinux squashfs-tools genisoimage memtest86+ rsync
+
+# 2. Meyiapkan tempat kerja
+cd $HOME && mkdir -p Project/{root32,dvd32}
+#sesuaikan nama folder tempat kerjanya dan ganti root32 & dvd32 dengan root64 & dvd64 jika kita membuat varian 64bit/amd64
+
+# 3. Memulai proses debootstrap
+sudo debootstrap --arch=i386 --variant=minbase xenial $HOME/Project/root32 http://kartolo.sby.datautama.net.id/ubuntu/
+# '--arch=i386' jika kita membuat distro 32 bit. ganti ke '--arch=amd64' jika kita membuat distro 64bit/amd64
+# 'xenial' adalah nama rilis ubuntu yang akan kita debootstrap. ganti sesuai keingin kita. misalkan zesty atau yang lain-nya
+# '$HOME/Project/root32' sesuaikan dengan tahap 2. Menyiapkan tempat kerja
+# 'http://kartolo.sby.datautama.net.id/ubuntu/' adalah repo  tempat kita mengunduh mibase ubuntu. sesuaikan dengan repo yang tercepat jika ada
