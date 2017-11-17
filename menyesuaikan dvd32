@@ -1,0 +1,11 @@
+Tahap 2. Menyesuaikan folder dvd32
+
+download semua isi folder dvd32 di github.
+kemudian copy-kan ke dvd32 atau dvd64 di tempat kerja kita.
+
+pada file 'README.diskdefines' sesuaikan baris pertama dengan nama distro gnu linux baru kita.
+contoh, '#define DISKNAME orca linux 0.1' menjadi '#define DISKNAME OS kita 1.0'.
+
+pada folder isolinux/isolinux.cfg sesuaikan perintah 'menu label ^Orca Linux 0.1' menjadi nama disto baru kita. contohnya menjadi '^OS kita 1.0'.
+
+pada folder .disk/ kita hanya boleh menedit file 'info' dan 'release_notes_url'
