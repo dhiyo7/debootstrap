@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#########################################
+# Memulai kembali perakitan di chroot   #
+# setelah kita keluar dari chroot	#
+#########################################
+
+cd $HOME/Project
+#sesuaikan dengan tahap pembuatan tempat kerja
+
+sudo mount --bind /dev/ root32/dev
+#sesuaikan dengan tahap pembuatan tempat kerja
+
+sudo chroot root32
+#sesuaikan dengan tahap pembuatan tempat kerja
+
+mount -t proc none /proc && mount -t sysfs none /sys && mount -t devpts none /dev/pts
+export HOME=/root && export LC_ALL=C
