@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#########################################
+# Update dan install kernel 		#
+# lalu install aplikasi penting lainnya #
+#########################################
+
+apt-get install --no-install-recommends --yes --force-yes xorg
