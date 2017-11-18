@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#################################
+# Persiapan dan masuk ke chroot	#
+#				#
+#################################
+
+cd $HOME/Project && sudo mount --bind /dev/ root32/dev
+#'root32' sesuaikan dengan tahap persiapan tempat kerja
+
+sudo cp /etc/resolv.conf root32/etc/
+# agar chroot kita bisa terhubung ke internet
+#'root32' sesuaikan dengan tahap persiapan tempat kerja
+
+sudo chroot root32
+#'root32' sesuaikan dengan tahap persiapan tempat kerja
