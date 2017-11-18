@@ -1,5 +1,9 @@
-#setelah masuk ke chroot, masukkan perintah dibawah ini.
-#perintah ini wajib pada awal chroot
+#!/bin/bash
+
+###########################################################
+# setelah masuk ke chroot, masukkan perintah dibawah ini. #
+# perintah ini wajib pada awal chroot	 		  #
+###########################################################
 
 mount -r proc none /proc
 mount -t sysfs none /sys
