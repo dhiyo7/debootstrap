@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#########################################
+# Update dan install kernel 		#
+# lalu install aplikasi penting lainnya #
+#########################################
+
+apt-get update
+#mengupdate list
+
+apt-cache search linux-image
+#untuk melihat versi kernel yang tersedia di repository
+
+echo "masukkan versi kernel yang dipilih : "
+read versiKernel
+apt-get install --no-install-recommends --yes --force-yes linux-image-versiKernel-generic
+#contoh : 4.4.0-21
+#maka perintah yang tereksekusi adalah apt-get install linux-image-4.4.0-21-generic
+#jika ada perintah untuk menginstall grub, maka pilih jangan.
+
+apt-get install --no-install-recommend --yes --force-yes casper lupin-casper network-manager nano
+#install aplikasi penting lainnya
