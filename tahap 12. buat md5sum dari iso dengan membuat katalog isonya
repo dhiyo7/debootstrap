@@ -1,0 +1,8 @@
+#!/bin/bash
+
+###################################################################
+#membuat mdsum dari image iso sama dengan membuat katalog isonya  #
+###################################################################
+
+find -type f -print0 | sudo xargs -0 md5sum | grep -v isolinux/boot.cat | sudo tee MD5SUMS
+# posisi harus berada di direktori dvd32 atau dvd64
