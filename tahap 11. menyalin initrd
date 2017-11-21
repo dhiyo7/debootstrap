@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#########################################################
+# Menyalin initrd.img ke dvd32/casper sebagai initrd.lz #
+#########################################################
+
+sudo cp root32/boot/initrd.img-4.4.0-2-generic dvd32/casper/initrd.lz
+#sesuiakan nama folder dan versi-nya
