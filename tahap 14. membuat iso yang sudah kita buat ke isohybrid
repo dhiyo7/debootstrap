@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#########################################################################################
+# Membuat iso hybrid dari iso yang sudah kita buat agar bisa dibuatkan live melalui FD  #
+#########################################################################################
+
+isohybrid orcalinux.iso
+# Pastikan kita berada di rektori yang sama dengan iso yang akan kita ubah
+# Sesuaikan nama iso-nya
