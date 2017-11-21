@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#####################
+# Membuat iso image #
+#####################
+
+sudo mkisofs -r -V "mylinux" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ../mylinux.iso dvd32
+# Sesuaikan "mylinux" dan "mylinux.iso" sesuai keinginan.
