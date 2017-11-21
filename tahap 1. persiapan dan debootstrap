@@ -9,7 +9,7 @@
 
 
 # 1. Menginstall aplikasi pendukung
-sudo apt-get install -y debootstrap syslinux isolinux squashfs-tools genisoimage memtest86+ rsync
+sudo apt-get install -y debootstrap syslinux isolinux squashfs-tools genisoimage memtest86+ rsync isolinux-utils syslinux-utils
 
 # 2. Meyiapkan tempat kerja
 cd $HOME && mkdir -p Project/{root32,dvd32}
