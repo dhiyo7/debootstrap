@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#########################################
+# Menyalin kernel yang telah disintall  #
+# Ke direktori dvd32                    #
+#########################################
+
+sudo cp root32/boot/vmlinuz-4.4.0-2-generic dvd32/casper/vmlinuz
+#sesuaikan nama folder dan versi kernel-nya
