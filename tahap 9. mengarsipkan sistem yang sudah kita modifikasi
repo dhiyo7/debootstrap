@@ -1,0 +1,9 @@
+#!/bin/bash
+
+###################################################
+# Mengarsipkan sistem yang susah kita modifikasi  #
+# kebentuk filesystem.squashfs                    #
+###################################################
+
+sudo mksquashfs root32 dvd32/casper/filesystem.squashfs
+#sesuaikan nama folder-nya
